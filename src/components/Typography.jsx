@@ -19,5 +19,5 @@ export function H3({ children, color }) {
 }
 
 export function Body({ children, color }) {
-  return <Text color={color} fontSize={['xl', 'xl']}>{children}</Text>;
+  return <Text color={color} fontSize={['lg', 'xl']}>{children}</Text>;
 }
