@@ -10,6 +10,7 @@ import { CalendarIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import { H1 } from './Typography';
 import InfoSection from './InfoSection';
+import commencementUrl from '../assets/commencement.jpg';
 
 const color = '#00693e';
 const titleVariants = {
@@ -80,7 +81,7 @@ function Main() {
         bgColor={color}
         bgPos="center"
         bgSize="cover"
-        backgroundImage="url('src/assets/commencement.jpg')"
+        backgroundImage={`url(${commencementUrl})`}
         color="white"
       >
         <Box as={motion.div} variants={titleVariants}>
