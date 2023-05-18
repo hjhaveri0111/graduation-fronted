@@ -8,9 +8,13 @@ import {
 } from '@chakra-ui/react';
 import { CalendarIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
+import mapUrl from 'src/assets/Screenshot 2023-05-16 at 1.03.49 PM.png';
+import jewelUrl from 'src/assets/lunch.avif';
 import { H1 } from './Typography';
 import InfoSection from './InfoSection';
 import commencementUrl from '../assets/commencement.jpg';
+import calenderUrl from '../assets/b5d4b576388e4f6e26e020e12e14b8ab.png';
+import greenUrl from '../assets/green.jpeg';
 
 const color = '#00693e';
 const titleVariants = {
@@ -41,28 +45,28 @@ function Main() {
       main: { lineOne: 'Sunday June 11, 2023', lineTwo: '9:00am' },
       sub: 'WHEN IS IT?',
       reverse: false,
-      image: 'src/assets/b5d4b576388e4f6e26e020e12e14b8ab.png',
+      image: calenderUrl,
       link: 'https://home.dartmouth.edu/events/commencement',
     },
     {
       main: { lineOne: 'Dartmouth Green' },
       sub: 'WHERE IS IT?',
       reverse: true,
-      image: 'src/assets/green.jpeg',
+      image: greenUrl,
       link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
       main: { lineOne: 'Courtyard Marriott' },
       sub: 'WHERE AM I STAYING?',
       reverse: false,
-      image: 'src/assets/Screenshot 2023-05-16 at 1.03.49 PM.png',
+      image: mapUrl,
       link: 'https://www.maps.google.com',
     },
     {
       main: { lineOne: 'Jewel Of India', lineTwo: '12:30pm' },
       sub: 'WHAT\'S FOR LUNCH?',
       reverse: true,
-      image: 'src/assets/lunch.avif',
+      image: jewelUrl,
       link: 'http://www.jewelofindiahanover.com/',
 
     },

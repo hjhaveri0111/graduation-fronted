@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_ROUTE = 'http://localhost:9090/';
+const BASE_ROUTE = 'https://graduation-backend-qkef.onrender.com/';
 
 export async function getAllAttendees() {
   const response = await axios.get(`${BASE_ROUTE}attendees`);
