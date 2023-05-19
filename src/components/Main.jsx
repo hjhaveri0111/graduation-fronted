@@ -57,7 +57,7 @@ function Main() {
       link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
-      main: { lineOne: 'Courtyard Marriott', lineTwo: 'Check-In: Saturday, June 11 \n Check-Out: Monday, June 12' },
+      main: { lineOne: 'Courtyard Marriott', lineTwo: 'In: Saturday, June 10\nOut: Monday, June 12' },
       sub: 'WHERE AM I STAYING?',
       reverse: false,
       image: mapUrl,
@@ -66,7 +66,7 @@ function Main() {
     },
     {
       main: { lineOne: 'Jewel Of India', lineTwo: '12:30pm' },
-      sub: 'WHAT\'S FOR LUNCH?',
+      sub: 'WHAT\'S FOR GRAD DAY LUNCH?',
       reverse: true,
       image: jewelUrl,
       link: 'http://www.jewelofindiahanover.com/',

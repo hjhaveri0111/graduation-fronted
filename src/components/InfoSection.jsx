@@ -38,8 +38,8 @@ export default function InfoSection(props) {
       const [string1, string2] = main.lineTwo.split('\n');
       return (
         <>
-          <Text fontSize="3xl" color={color}>{string1}</Text>
-          <Text fontSize="3xl" color={color}>{string2}</Text>
+          <Text fontSize={['lg', '3xl']} color={color}>{string1.trim()}</Text>
+          <Text fontSize={['lg', '3xl']} color={color}>{string2.trim()}</Text>
         </>
       );
     } else {
