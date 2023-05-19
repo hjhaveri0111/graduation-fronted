@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Button, Flex, Box,
 } from '@chakra-ui/react';
-import { CheckIcon, CloseIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import { Body } from './Typography';
 
@@ -11,7 +10,7 @@ export default function RsvpCard(props) {
   const {
     name, attending, set, id,
   } = props;
-  // const [attend, setAttend] = useState(attending);
+
   let color = 'gray.200';
   if (attending === 1) {
     color = 'green.100';
@@ -39,8 +38,8 @@ export default function RsvpCard(props) {
     >
       <Body>{name}</Body>
       <Box>
-        <Button mr={1} colorScheme="green" onClick={() => set(id, 1)}><CheckIcon /></Button>
-        <Button colorScheme="red" onClick={() => set(id, 0)}><CloseIcon /></Button>
+        <Button mr={1} fontSize={['sm', 'md']} colorScheme="green" onClick={attending === 1 ? null : () => set(id, 1)}>Attending</Button>
+        <Button fontSize={['sm', 'md']} colorScheme="red" onClick={attending === 1 ? null : () => set(id, 0)}>Not Attending</Button>
       </Box>
     </Flex>
   );

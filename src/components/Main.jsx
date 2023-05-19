@@ -57,7 +57,7 @@ function Main() {
       link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
-      main: { lineOne: 'Fairfield Inn Concord', lineTwo: 'In: Saturday, June 10\nOut: Monday, June 12' },
+      main: { lineOne: 'Fairfield Inn Concord', lineTwo: 'Check-In: Saturday, June 10\nCheck-Out: Monday, June 12' },
       sub: 'WHERE AM I STAYING?',
       reverse: false,
       image: mapUrl,
