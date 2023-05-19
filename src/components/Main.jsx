@@ -57,12 +57,12 @@ function Main() {
       link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
-      main: { lineOne: 'Courtyard Marriott', lineTwo: 'In: Saturday, June 10\nOut: Monday, June 12' },
+      main: { lineOne: 'Fairfield Inn Concord', lineTwo: 'In: Saturday, June 10\nOut: Monday, June 12' },
       sub: 'WHERE AM I STAYING?',
       reverse: false,
       image: mapUrl,
       // eslint-disable-next-line max-len
-      link: 'https://www.google.com/maps/dir//courtyard+marriott+concord+nh/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e26afad18a48eb:0x9a7e4cb1acf755d8!2m2!1d-71.5364662!2d43.2179296',
+      link: 'https://www.google.com/maps/dir//Fairfield+Inn+Concord,+4+Gulf+St,+Concord,+NH+03301/@43.4379413,-72.2346735,data=!3m1!4b1!4m21!1m10!3m9!1s0x89e26a88ed178eff:0x33273a2c6ee2e4de!2sFairfield+Inn+Concord!5m2!4m1!1i2!8m2!3d43.1971696!4d-71.5288987!16s%2Fg%2F1tfqrywq!4m9!1m1!4e1!1m5!1m1!1s0x89e26a88ed178eff:0x33273a2c6ee2e4de!2m2!1d-71.5288987!2d43.1971696!3e0',
     },
     {
       main: { lineOne: 'Jewel Of India', lineTwo: '12:30pm' },

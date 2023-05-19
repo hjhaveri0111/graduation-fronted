@@ -34,7 +34,7 @@ export default function InfoSection(props) {
   const dir = reverse ? 'row-reverse' : 'row';
 
   const renderLineTwo = () => {
-    if (main.lineOne === 'Courtyard Marriott') {
+    if (main.lineOne === 'Fairfield Inn Concord') {
       const [string1, string2] = main.lineTwo.split('\n');
       return (
         <>
