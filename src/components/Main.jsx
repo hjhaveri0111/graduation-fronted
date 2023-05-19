@@ -13,7 +13,8 @@ import jewelUrl from '../assets/lunch.avif';
 import { H1 } from './Typography';
 import InfoSection from './InfoSection';
 import commencementUrl from '../assets/commencement.jpg';
-import calenderUrl from '../assets/b5d4b576388e4f6e26e020e12e14b8ab.png';
+import calendarUrl from '../assets/calendar.jpeg';
+
 import greenUrl from '../assets/green.jpeg';
 
 const color = '#00693e';
@@ -28,7 +29,7 @@ const titleVariants = {
   onscreen: {
     y: '0',
     opacity: 1,
-    scale: 1.1,
+    scale: 1.5,
 
     transition: {
       type: 'spring',
@@ -45,7 +46,7 @@ function Main() {
       main: { lineOne: 'Sunday June 11, 2023', lineTwo: '9:00am' },
       sub: 'WHEN IS IT?',
       reverse: false,
-      image: calenderUrl,
+      image: calendarUrl,
       link: 'https://home.dartmouth.edu/events/commencement',
     },
     {
@@ -56,11 +57,12 @@ function Main() {
       link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
-      main: { lineOne: 'Courtyard Marriott' },
+      main: { lineOne: 'Courtyard Marriott', lineTwo: 'Check-In: Saturday, June 11 \n Check-Out: Monday, June 12' },
       sub: 'WHERE AM I STAYING?',
       reverse: false,
       image: mapUrl,
-      link: 'https://www.maps.google.com',
+      // eslint-disable-next-line max-len
+      link: 'https://www.google.com/maps/dir//courtyard+marriott+concord+nh/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e26afad18a48eb:0x9a7e4cb1acf755d8!2m2!1d-71.5364662!2d43.2179296',
     },
     {
       main: { lineOne: 'Jewel Of India', lineTwo: '12:30pm' },
@@ -89,7 +91,8 @@ function Main() {
         color="white"
       >
         <Box as={motion.div} variants={titleVariants}>
-          <H1>Harsh&apos;s Graduation</H1>
+          <H1>Harsh&apos;s </H1>
+          <H1>Graduation</H1>
         </Box>
       </Flex>
       <Flex p={20} flexDir="column" w="100%" justifyContent="space-around" alignItems="center">

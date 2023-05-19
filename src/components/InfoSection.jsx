@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  Flex, Box, Image, Spacer, Link, Divider,
+  Flex, Box, Image, Spacer, Link, Divider, Text,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { H2, H3 } from './Typography';
 
 const color = '#00693e';
@@ -31,6 +32,20 @@ export default function InfoSection(props) {
     main, sub, image, reverse, height, link,
   } = props;
   const dir = reverse ? 'row-reverse' : 'row';
+
+  const renderLineTwo = () => {
+    if (main.lineOne === 'Courtyard Marriott') {
+      const [string1, string2] = main.lineTwo.split('\n');
+      return (
+        <>
+          <Text fontSize="3xl" color={color}>{string1}</Text>
+          <Text fontSize="3xl" color={color}>{string2}</Text>
+        </>
+      );
+    } else {
+      return <H2 color={color}>{main.lineTwo}</H2>;
+    }
+  };
   return (
     <>
       <Flex
@@ -50,13 +65,14 @@ export default function InfoSection(props) {
 
         <Flex as={motion.div} w={['100%', '70%']} flexDir="column">
           <H3>{sub}</H3>
-          <Link style={{ textDecoration: 'underline', color: `${color}` }} href={link} isExternal>
+          <Link href={link} isExternal>
             <H2 as={motion.div} variants={cardVariants} color={color}>
               {main.lineOne}
+              <ExternalLinkIcon mb={[2, 4]} />
             </H2>
 
           </Link>
-          {main.lineTwo ? <H2 as={motion.div} variants={cardVariants} color={color}>{main.lineTwo}</H2> : null}
+          {main.lineTwo ? renderLineTwo() : null}
         </Flex>
       </Flex>
       <Spacer />
