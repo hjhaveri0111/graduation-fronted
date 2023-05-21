@@ -7,13 +7,15 @@ import {
   Box,
 } from '@chakra-ui/react';
 import { CalendarIcon } from '@chakra-ui/icons';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Confetti from 'react-confetti';
 import { motion } from 'framer-motion';
-import mapUrl from '../assets/Screenshot 2023-05-16 at 1.03.49 PM.png';
-import jewelUrl from '../assets/lunch.avif';
 import { H1 } from './Typography';
 import InfoSection from './InfoSection';
 import commencementUrl from '../assets/commencement.jpg';
-import calendarUrl from '../assets/calendar.jpeg';
+import calendarUrl from '../assets/calendar.png';
+import mapUrl from '../assets/Screenshot 2023-05-21 at 3.26.29 PM.png';
+import jewelUrl from '../assets/lunch.avif';
 
 import greenUrl from '../assets/green.jpeg';
 
@@ -40,7 +42,9 @@ const titleVariants = {
 };
 
 function Main() {
-  const height = 50;
+  const h = 50;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   const information = [
     {
       main: { lineOne: 'Sunday June 11, 2023', lineTwo: '9:00am' },
@@ -54,7 +58,8 @@ function Main() {
       sub: 'WHERE IS IT?',
       reverse: true,
       image: greenUrl,
-      link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
+      link: '/parking',
+      // link: 'https://www.google.com/maps/dir//dartmouth+green/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x4cb4c9c2b2b8f65f:0x9a645e5d47004bd3?sa=X&ved=2ahUKEwielfLclfv-AhWdlYkEHa9yBeQQ9Rd6BAhyEAQ',
     },
     {
       main: { lineOne: 'Fairfield Inn Concord', lineTwo: 'Check-In: Saturday, June 10\nCheck-Out: Monday, June 12' },
@@ -69,12 +74,14 @@ function Main() {
       sub: 'WHAT\'S FOR GRAD DAY LUNCH?',
       reverse: true,
       image: jewelUrl,
-      link: 'http://www.jewelofindiahanover.com/',
+      // eslint-disable-next-line max-len
+      link: 'https://www.google.com/maps/dir//Jewel+of+India,+11+Lebanon+St,+Hanover,+NH+03755/@43.7043876,-72.2910613,16z/data=!3m1!4b1!4m13!1m2!2m1!1sjewel+of+india!4m9!1m1!4e1!1m5!1m1!1s0x4cb4c9e70d1e7cb7:0x74f8d98d787375cb!2m2!1d-72.2879105!2d43.7007643!3e0',
 
     },
   ];
   return (
     <Flex overflow="hidden" paddingBottom={10} w="100vw" justifyContent="center" alignItems="center" flexDir="column" bgColor="white">
+      <Confetti width={width} colors={[color, '#fffff']} height={height} recycle={false} />
       <Flex
         as={motion.div}
         viewport={{ once: true }}
@@ -96,13 +103,14 @@ function Main() {
         </Box>
       </Flex>
       <Flex p={20} flexDir="column" w="100%" justifyContent="space-around" alignItems="center">
-        {information.map((info) => <InfoSection main={info.main} height={height} sub={info.sub} reverse={info.reverse} image={info.image} link={info.link} />)}
+        {information.map((info) => <InfoSection main={info.main} height={h} sub={info.sub} reverse={info.reverse} image={info.image} link={info.link} />)}
       </Flex>
 
       <Link
-        w="40%"
         h="7vh"
         href="/rsvp"
+        alignSelf="center"
+
       >
         <Button
           color="white"
@@ -110,7 +118,7 @@ function Main() {
           rightIcon={<CalendarIcon />}
           backgroundColor={color}
         >
-          RSVP
+          RSVP by May 31st
         </Button>
       </Link>
     </Flex>

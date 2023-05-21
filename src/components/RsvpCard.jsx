@@ -18,6 +18,13 @@ export default function RsvpCard(props) {
     color = 'red.100';
   }
 
+  const renderNotAttending = () => {
+    if (attending === 1) {
+      return null;
+    } else {
+      return <Button fontSize={['sm', 'md']} colorScheme="red" onClick={attending === 1 ? null : () => set(id, 0)}>Not Attending</Button>;
+    }
+  };
   return (
     <Flex
       key={id}
@@ -39,7 +46,7 @@ export default function RsvpCard(props) {
       <Body>{name}</Body>
       <Box>
         <Button mr={1} fontSize={['sm', 'md']} colorScheme="green" onClick={attending === 1 ? null : () => set(id, 1)}>Attending</Button>
-        <Button fontSize={['sm', 'md']} colorScheme="red" onClick={attending === 1 ? null : () => set(id, 0)}>Not Attending</Button>
+        {renderNotAttending()}
       </Box>
     </Flex>
   );
