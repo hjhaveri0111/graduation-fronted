@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Flex, ListItem, OrderedList, Link, Divider, Spacer,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { ArrowBackIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { H1, H2, H3 } from './Typography';
 
 export default function ParkingInfo() {
@@ -43,6 +43,9 @@ export default function ParkingInfo() {
   };
   return (
     <Flex w="100vw" h="auto" flexDir="column" alignItems="center" justifyContent="space-around" bgColor="white" pb={10}>
+      <Link href="/">
+        <ArrowBackIcon color="white" m={[1, 5]} style={{ position: 'absolute', top: '0px', left: '0px' }} boxSize={[6, 8]} />
+      </Link>
       <Flex w="100%" h="50vh" justifyContent="center" alignItems="center" bgColor="#00693e" mb={10}>
         <H1 color="white">
           Directions and Parking
