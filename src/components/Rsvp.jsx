@@ -53,14 +53,14 @@ export default function Rsvp() {
       <H3>By May 31st</H3>
       <InputGroup m={2} display="flex" justifyContent="center">
         <Input w="50%" onChange={(event) => { setQuery(event.target.value); }} value={query} placeholder="search for your name" />
-        <IconButton onClick={() => searchForAttendees(query)} icon={<SearchIcon />} />
+        <IconButton type="submit" onClick={() => searchForAttendees(query)} icon={<SearchIcon />} />
       </InputGroup>
       <Flex w="100%" bgColor="white" justifyContent="space-around" p={30}>
         <Box w={['90%', '75%']} h="auto">
           <Flex flexDir="column" w="100%" justifyContent="center">
             {searched.map((person) => <RsvpCard key={person.id} id={person.id} name={person.name} attending={person.attending} set={setAttendeeStatus} />)}
             <Divider />
-            <H2>Who&apos;s Coming</H2>
+            <H2>Attendees</H2>
             {attending.map((person) => <Text fontSize={['2xl', '3xl']} key={person}>{person}</Text>)}
           </Flex>
         </Box>
