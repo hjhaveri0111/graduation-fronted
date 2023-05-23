@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 import {
-  Flex, ListItem, OrderedList, Link, Divider, Spacer,
+  Flex, ListItem, OrderedList, Link, Divider, Spacer, Image,
 } from '@chakra-ui/react';
 import { ArrowBackIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { H1, H2, H3 } from './Typography';
+import parkingMap from '../assets/campus_map.png';
 
 export default function ParkingInfo() {
   const parkingLots = [
@@ -70,7 +71,8 @@ export default function ParkingInfo() {
       {renderLotList()}
       <H3>All campus parking lots are free</H3>
       <H3>Street Parking is metered</H3>
-
+      <Spacer m={1} />
+      <Image w={['90%', '60%']} src={parkingMap} />
       <Spacer m={1} />
       <Divider mb={2} />
 
